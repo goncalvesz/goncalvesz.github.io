@@ -175,8 +175,15 @@ h1 a{
         margin: 0.5em 0;
     }
 
+    .linguagens{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     .linguagem {
         width: 100%;
     }
-
+    .projeto{
+        min-width: fit-content;
+    }
 }
