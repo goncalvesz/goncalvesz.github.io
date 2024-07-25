@@ -45,7 +45,9 @@ h1 a{
 .container {
     max-width: 1000px;
     padding: 2em;
-    margin: 0 15%;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
     max-width: fit-content;
 }
 
@@ -119,6 +121,7 @@ h1 a{
     align-items: center;
     margin: 1em;
     width: calc(100%/3 - 2em);
+    max-height: 450px;
     box-sizing: border-box;
     padding: 1em;
     background-color: white;
@@ -126,11 +129,36 @@ h1 a{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2ms, background-color 0.3s;
+    overflow: hidden;
+}
+
+.projeto p{
+    font-size: 0;
+    z-index: 3;
+    color: #300763;
+    text-align: center;
+}
+
+.projeto img{
+    height: auto;
+    max-height: 400px;
+    width: 90%;
+    border-radius: 10px;
 }
 
 .projeto:hover { /* Animação escurecer e levantar */
     transform: translateY(-5px);
     background-color: rgba(106, 27, 154, 0.2);
+}
+
+.projeto:hover p{
+    font-size: 16px;
+    position: absolute;
+    margin: 10% 5% 0 5%;
+}
+
+.projeto:hover img{
+    opacity: 10%;
 }
 
 :is(.contatos , .github){
